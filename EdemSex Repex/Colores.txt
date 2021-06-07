@@ -1,0 +1,8 @@
+Background:Black
+Cabecera:
+Texto parrafo:
+Texto Titulo:
+Card:
+Card:hover
+Texto_menu:
+Texto_menu:Hover:

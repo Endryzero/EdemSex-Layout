@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 3;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 233px;
+  background: black;
+  max-width: 1500px;
+  min-width: 253px;
+  margin: auto;
+}
+
+@media screen and (max-width: 253px) {
+  body {
+    background: rgb(250, 0, 0);
+  }
+}
+
+/* configure scroll */
+
+.scroll::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+}
+
+/*Color de fondo y redondeado de las esquinas del thumb*/
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--morado);
+  opacity:.3;
+  border-radius: 2px;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--morado);
+  cursor: default;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.scroll::-webkit-scrollbar-track {
+  background: rgba(255, 0, 157, 0);
+  border-radius: 2px;
+}
+
+.ventana-modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.623);
+  z-index: 100;
+  top: 0;
+  padding: 20px;
+  font-size: 10px;
+ 
+}
+
+.container-content-ventana-modal {
+  width: 80%;
+  height: 100%;
+
+  margin: auto;
+  background: rgba(0, 0, 0, 0.664);
+  border-radius: 10px;
+  padding: 1em;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.container-titulo-ventana-modal {
+  width: 100%;
+}
+.titulo-ventana-modal {
+  font-size: 4em;
+  text-align: center;
+  color: var(--titulo);
+  
+}
+
+.btn-close-ventana-modal {
+  float: right;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgb(53, 53, 53);
+  color: var(--titulo);
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-close-ventana-modal:hover {
+  color: var(--morado);
+  background: rgb(26, 26, 26);
+  transition: all 0.3s ease;
+}
+.content-ventana-modal {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.form-ventana-modal {
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 2em;
+}
+.lbl-ventana-modal {
+  color: var(--titulo);
+  font-size: 2em;
+}
+
+.txt-ventana-modal {
+  padding: 0.5em;
+  border: none;
+  border-bottom: solid 2px rgb(65, 65, 65);
+  outline: none;
+  width: 100%;
+  margin-bottom: 1em;
+  background: none;
+  color: var(--titulo);
+  font-size: 2em;
+}
+.txtarea-ventana-modal{
+  
+  height: auto;
+}
+
+
+.txt-ventana-modal:focus {
+  color: var(--morado);
+
+  border-bottom: solid 1px var(--morado);
+  transition: all 0.4s ease;
+}
+.txt-ventana-modal:active {
+    border-bottom: solid 1px var(--morado);
+    transition: all 0.4s ease;
+  }
+.pregunta-ventana-modal {
+  color: var(--parrafo);
+  margin: auto;
+  font-size: 2em;
+  margin-right: 1em;
+  display: block;
+}
+
+.checkedRadios-ventana-modal {
+  background: black;
+}
+
+.btn-enviar-ventana-modal {
+  margin: auto;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 2em;
+  margin: top;
+  display: block;
+  background: rgb(26, 26, 26);
+  border: none;
+  color: var(--titulo);
+  cursor: pointer;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.btn-enviar-ventana-modal:hover {
+  border-bottom: solid 1px var(--morado);
+  color: var(--morado);
+  transition: all 0.4s ease;
+}
+
+.info-ventana-modal{
+    color: var(--parrafo);
+    font-size: 2em;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .form-ventana-modal {
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2em;
+  }
+  .content-ventana-modal,.ventana-modal{
+    font-size: 9px;
+  }
+
+
+}
+
+@media screen and (max-width: 538px) {
+  .container-content-ventana-modal {
+    width: 100%;
+  }
+
+  .content-ventana-modal,.ventana-modal{
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .form-ventana-modal {
+    padding: 0;
+    padding-bottom: 1em;
+  }
+  .content-ventana-modal{
+    font-size: 7px;
+  }
+  body {
+    overflow: hidden;
+  }
+  .ventana-modal {
+    padding: 1em;
+    font-size: 7px;
+  }
+}
